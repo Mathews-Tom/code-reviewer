@@ -1,0 +1,31 @@
+spec_version: "0.1.0"
+name: code-reviewer
+version: "1.0.0"
+description: >
+  Multi-phase code review — severity-ranked findings across naming conventions,
+  cyclomatic complexity, error handling, DRY violations, security surface, and
+  test coverage gaps with file:line references
+license: MIT
+
+model:
+  preferred: claude-sonnet-4-5-20250929
+  fallback:
+    - claude-haiku-4-5-20251001
+  constraints:
+    temperature: 0.4
+    max_tokens: 16384
+
+skills: []
+
+runtime:
+  max_turns: 50
+  timeout: 600
+
+tags:
+  - code-review
+  - quality
+  - complexity
+  - dry
+  - testing
+  - linting
+  - best-practices
